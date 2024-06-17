@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}设备管理{% endblock %}
+{% block card %}
+<div class="layui-card-header">
+    <h2>设备报废管理</h2>
+
+</div>
+{% endblock %}
+{% block body %}
+    <br />
+    <form class="layui-form" method="post">
+        {{ form.csrf_token }}
+
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width:150px">设备编号：</label>
+            <div class="layui-input-block">
+                {{ form.equipmentNo(class="layui-input", style="width:20%") }}
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="margin-left:180px">
+                <div class="layui-input-inline login-btn">
+                    {{ form.submit(class="layui-btn") }}
+                </div>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
